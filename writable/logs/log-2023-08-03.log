@@ -1,0 +1,74 @@
+CRITICAL - 2023-08-03 00:56:25 --> login filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 493.
+ 1 SYSTEMPATH\Filters\Filters.php(493): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('login')
+ 2 SYSTEMPATH\Filters\Filters.php(243): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 SYSTEMPATH\Filters\Filters.php(163): CodeIgniter\Filters\Filters->initialize('home')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Filters\Filters->run('home', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-03 01:03:53 --> Undefined array key "id"
+in APPPATH\Views\pages\profil\index.php on line 10.
+ 1 APPPATH\Views\pages\profil\index.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\pages\\profil\\index.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\profil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/profil/index', [], true)
+ 5 APPPATH\Controllers\ProfilController.php(24): view('pages/profil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfilController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-03 03:38:14 --> Call to undefined method App\Models\GUPModel::distinc
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\GUPController.php(21): CodeIgniter\Model->__call('distinc', [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-03 03:38:50 --> Cannot use object of type stdClass as array
+in APPPATH\Views\pages\spm_gup\index.php on line 14.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/spm_gup/index', [], true)
+ 4 APPPATH\Controllers\GUPController.php(24): view('pages/spm_gup/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-03 04:01:39 --> Undefined variable $tahun
+in APPPATH\Views\pages\spm_gup\index.php on line 12.
+ 1 APPPATH\Views\pages\spm_gup\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun', 'APPPATH\\Views\\pages\\spm_gup\\index.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\spm_gup\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/spm_gup/index', [], true)
+ 5 APPPATH\Controllers\GUPController.php(42): view('pages/spm_gup/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-03 04:01:45 --> Undefined variable $tahun
+in APPPATH\Views\pages\spm_gup\index.php on line 12.
+ 1 APPPATH\Views\pages\spm_gup\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun', 'APPPATH\\Views\\pages\\spm_gup\\index.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\spm_gup\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/spm_gup/index', [], true)
+ 5 APPPATH\Controllers\GUPController.php(42): view('pages/spm_gup/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-03 04:49:10 --> Invalid file: pages/gup/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/gup/index.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gup/index', [], true)
+ 3 APPPATH\Controllers\GUPController.php(41): view('pages/gup/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,123 @@
+ERROR - 2023-08-13 08:32:26 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_arsipd' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsipd', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_arsipd' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-13 08:32:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_arsipd'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-13 08:33:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_arsipd' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsipd', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_arsipd' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-13 08:33:06 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_arsipd'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-13 08:54:33 --> Undefined variable $userdata
+in APPPATH\Views\pages\layout\navbar.php on line 30.
+ 1 APPPATH\Views\pages\layout\navbar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userdata', 'APPPATH\\Views\\pages\\layout\\navbar.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\layout\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('pages/layout/navbar', null, true)
+ 5 APPPATH\Views\pages\layout\main.php(21): CodeIgniter\View\View->include('pages/layout/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\layout\\main.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('pages/layout/main', [], true)
+ 9 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/category/index', [], true)
+10 APPPATH\Controllers\CategoryController.php(18): view('pages/category/index', [...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->index()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-13 08:58:49 --> Undefined array key "file_lumpsum"
+in APPPATH\Views\pages\category\index.php on line 24.
+ 1 APPPATH\Views\pages\category\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file_lumpsum"', 'APPPATH\\Views\\pages\\category\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\category\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/category/index', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(20): view('pages/category/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

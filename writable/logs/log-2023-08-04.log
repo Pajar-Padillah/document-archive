@@ -1,0 +1,712 @@
+ERROR - 2023-08-04 01:50:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsip', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-04 01:50:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 03:04:58 --> mysqli_sql_exception: FUNCTION db_arsip.dayy does not exist in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT dayy(tan...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT dayy(tan...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT dayy(tan...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT dayy(tan...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(19): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 03:04:58 --> FUNCTION db_arsip.dayy does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT dayy(tanggal) as bulan_lumpsum, COUNT(id) as jumlah
+FROM `lumpsum`
+GROUP BY dayy(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT dayy(tanggal) as bulan_lumpsum, COUNT(id) as jumlah
+FROM `lumpsum`
+GROUP BY dayy(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT dayy(tanggal) as bulan_lumpsum, COUNT(id) as jumlah
+FROM `lumpsum`
+GROUP BY dayy(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT dayy(tanggal) as bulan_lumpsum, COUNT(id) as jumlah
+FROM `lumpsum`
+GROUP BY dayy(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(19): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 03:45:43 --> mysqli_sql_exception: Unknown column 'jumlah' in 'field list' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 03:45:43 --> Unknown column 'jumlah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 03:46:37 --> mysqli_sql_exception: Invalid use of group function in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 03:46:37 --> Invalid use of group function
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(COUNT(id)) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(COUNT(id)) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(COUNT(id)) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan_lumpsum, COUNT(id) as jumlah, MAX(COUNT(id)) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 03:59:44 --> Undefined variable $data_grafik_lumpsum
+in APPPATH\Views\pages\dashboard.php on line 87.
+ 1 APPPATH\Views\pages\dashboard.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_grafik_lumpsum', 'APPPATH\\Views\\pages\\dashboard.php', 87)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\HomeController.php(36): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 04:04:58 --> Undefined property: stdClass::$bulan
+in APPPATH\Views\pages\dashboard.php on line 88.
+ 1 APPPATH\Views\pages\dashboard.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$bulan', 'APPPATH\\Views\\pages\\dashboard.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\HomeController.php(36): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 04:05:18 --> Undefined property: stdClass::$bulan
+in APPPATH\Views\pages\dashboard.php on line 88.
+ 1 APPPATH\Views\pages\dashboard.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$bulan', 'APPPATH\\Views\\pages\\dashboard.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\HomeController.php(36): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 04:43:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)' at line 1 in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 04:43:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 04:44:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)' at line 1 in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 04:44:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max from COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 04:44:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)' at line 1 in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 04:44:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max COUNT(id)
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 04:44:45 --> mysqli_sql_exception: Unknown column 'jumlah' in 'field list' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 04:44:45 --> Unknown column 'jumlah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`, MAX(jumlah) as max
+FROM `lumpsum`
+WHERE YEAR(tanggal) = 2023
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(20): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 05:38:46 --> Undefined variable $tahun
+in APPPATH\Views\pages\dashboard.php on line 76.
+ 1 APPPATH\Views\pages\dashboard.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun', 'APPPATH\\Views\\pages\\dashboard.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\HomeController.php(35): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 05:38:57 --> Undefined variable $validation
+in APPPATH\Views\pages\dashboard.php on line 76.
+ 1 APPPATH\Views\pages\dashboard.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\pages\\dashboard.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\HomeController.php(35): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 05:39:14 --> Undefined variable $validation
+in APPPATH\Views\pages\dashboard.php on line 79.
+ 1 APPPATH\Views\pages\dashboard.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\pages\\dashboard.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/dashboard', [], true)
+ 5 APPPATH\Controllers\HomeController.php(35): view('pages/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 05:54:21 --> Undefined variable $tahun_lumpsum
+in APPPATH\Controllers\HomeController.php on line 35.
+ 1 APPPATH\Controllers\HomeController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_lumpsum', 'APPPATH\\Controllers\\HomeController.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 08:52:44 --> Undefined variable $lumpsum
+in APPPATH\Views\pages\gup\index.php on line 47.
+ 1 APPPATH\Views\pages\gup\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lumpsum', 'APPPATH\\Views\\pages\\gup\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gup\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gup/index', [], true)
+ 5 APPPATH\Controllers\GUPController.php(41): view('pages/gup/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-08-04 09:29:17 --> tes2 is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 323.
+ 1 SYSTEMPATH\Validation\Validation.php(323): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('tes2')
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('uraian', 'uraian', 'tes2', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\GUPController.php(104): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GUPController->update('21')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GUPController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 09:42:34 --> mysqli_sql_exception: Unknown column 'August' in 'where clause' in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(ta...', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(ta...')
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(ta...')
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(ta...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\HomeController.php(21): CodeIgniter\Model->__call('get', Array)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(927): App\Controllers\HomeController->index()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#11 {main}
+CRITICAL - 2023-08-04 09:42:34 --> Unknown column 'August' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`
+FROM `lumpsum`
+WHERE YEAR(tanggal) = August
+GROUP BY MONTH(tanggal)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`
+FROM `lumpsum`
+WHERE YEAR(tanggal) = August
+GROUP BY MONTH(tanggal)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`
+FROM `lumpsum`
+WHERE YEAR(tanggal) = August
+GROUP BY MONTH(tanggal)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(tanggal) as bulan, COUNT(id) as jumlah, `tanggal` as `tanggal`
+FROM `lumpsum`
+WHERE YEAR(tanggal) = August
+GROUP BY MONTH(tanggal)', [], false)
+ 5 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\HomeController.php(21): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 09:47:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsip', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-04 09:47:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 09:49:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsip', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-04 09:49:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 09:49:15 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsip', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-04 09:49:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 09:49:33 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsip', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(NULL)
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-04 09:49:33 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find(null)
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-04 09:52:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'db_arsip', 3306, '', 0)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find('1')
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+#5 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find('1')
+#6 D:\application\Codeigniter\ci-v4.2.9\arsip-app\app\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+#7 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+#9 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\application\Codeigniter\ci-v4.2.9\arsip-app\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\application\Codeigniter\ci-v4.2.9\arsip-app\system\Commands\Server\rewrite.php(46): require_once('D:\\application\\...')
+#12 {main}
+CRITICAL - 2023-08-04 09:52:03 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `users`.`id` = :users.id:', [...], false)
+ 3 SYSTEMPATH\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '1')
+ 5 APPPATH\Controllers\BaseController.php(67): CodeIgniter\BaseModel->find('1')
+ 6 APPPATH\Controllers\BaseController.php(59): App\Controllers\BaseController->userdata()
+ 7 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
