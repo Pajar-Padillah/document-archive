@@ -1,56 +1,28 @@
-# CodeIgniter 4 Framework
+# Aplikasi Arsip Dokumen
 
-## What is CodeIgniter?
+<i><h2>Screenshots</h2></i>
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+<h3>Login</h3>
 
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+![1](https://github.com/Pajar-Padillah/document-archive/assets/81399270/613dd771-571d-4afc-a6ee-38a489c041cc)
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+<h3>Dashboard Admin</h3>
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+![2](https://github.com/Pajar-Padillah/document-archive/assets/81399270/d97e46a6-4530-4734-9370-084262ee7ad3)
 
+<h3>Profile</h3>
 
-## Important Change with index.php
+![3](https://github.com/Pajar-Padillah/document-archive/assets/81399270/5094f7ae-0f7a-4142-9e76-12b5aea0ab13)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+<h3>Data Users</h3>
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+![4](https://github.com/Pajar-Padillah/document-archive/assets/81399270/71d6bc12-be70-494b-8d03-6da2f64617a0)
 
-**Please** read the user guide for a better explanation of how CI4 works!
+<h3>Data Dokumen Lumpsum</h3>
 
-## Repository Management
+![5](https://github.com/Pajar-Padillah/document-archive/assets/81399270/3af23956-ce63-42ee-86d6-5b149cbd6776)
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+<h3>Data Dokumen GUP</h3>
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+![6](https://github.com/Pajar-Padillah/document-archive/assets/81399270/6a271c55-1b54-48b7-9cc0-a957b012c7be)
 
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
